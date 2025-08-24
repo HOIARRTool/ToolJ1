@@ -2422,27 +2422,6 @@ def display_executive_dashboard():
         else:
             st.info("ไม่มีข้อมูลเพียงพอสำหรับวิเคราะห์ความเสี่ยงเรื้อรัง")
 
-        st.markdown("---")
-        st.subheader("ดาวน์โหลดรายงานสรุปเป็นไฟล์ PDF")
-
-        if st.button("สร้างไฟล์ PDF สำหรับดาวน์โหลด"):
-            with st.spinner("กำลังสร้าง PDF... (อาจใช้เวลาสักครู่)"):
-                pdf_file = generate_executive_summary_pdf(
-                    df_filtered=df_filtered,
-                    metrics_data=metrics_data,
-                    total_month=total_month,
-                    df_freq=df_freq,
-                    min_date_str=min_date_str,
-                    max_date_str=max_date_str
-                )
-
-                st.download_button(
-                    label="📥 ดาวน์โหลด PDF ที่สร้างเสร็จแล้ว",
-                    data=pdf_file,
-                    file_name=f"Executive_Summary_{date.today().strftime('%Y-%m-%d')}.pdf",
-                    mime="application/pdf"
-                )
-
     elif selected_analysis == "สรุปรายหน่วยงาน":
         st.markdown("<h4 style='color: #001f3f;'>สรุปอุบัติการณ์แยกตามกลุ่ม/หน่วยงานหลัก</h4>", unsafe_allow_html=True)
 
