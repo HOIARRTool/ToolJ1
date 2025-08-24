@@ -1296,7 +1296,7 @@ def display_executive_dashboard():
         
         # ปรับแต่งให้ตัวเลขแสดงผลอยู่นอกแท่งเพื่อให้อ่านง่ายขึ้น
         fig_trend.update_traces(textposition='outside')
-                st.plotly_chart(fig_trend, use_container_width=True)        
+        st.plotly_chart(fig_trend, use_container_width=True)        
 
     elif selected_analysis == "Heatmap รายเดือน":
         st.markdown("<h4 style='color: #001f3f;'>Heatmap: จำนวนอุบัติการณ์รายเดือน</h4>", unsafe_allow_html=True)
