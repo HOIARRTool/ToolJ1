@@ -1284,14 +1284,19 @@ def display_executive_dashboard():
         )
         fig_status.update_layout(yaxis={'categoryorder': 'total ascending'}, showlegend=False)
         st.plotly_chart(fig_status, use_container_width=True)
-
-        fig_trend = px.line(
-            incident_trend, x='เดือน-ปี', y='จำนวนอุบัติการณ์',
-            title='จำนวนอุบัติการณ์ทั้งหมดที่เกิดขึ้นในแต่ละเดือน', markers=True,
-            labels={'เดือน-ปี': 'เดือน', 'จำนวนอุบัติการณ์': 'จำนวนครั้ง'}, line_shape='spline'
+        
+        fig_trend = px.bar(
+            incident_trend,
+            x='เดือน-ปี',
+            y='จำนวนอุบัติการณ์',
+            title='จำนวนอุบัติการณ์ทั้งหมดที่เกิดขึ้นในแต่ละเดือน',
+            text='จำนวนอุบัติการณ์',  # แสดงตัวเลขจำนวนบนแท่งกราฟ
+            labels={'เดือน-ปี': 'เดือน', 'จำนวนอุบัติการณ์': 'จำนวนครั้ง'}
         )
-        fig_trend.update_traces(line=dict(width=3))
-        st.plotly_chart(fig_trend, use_container_width=True)
+        
+        # ปรับแต่งให้ตัวเลขแสดงผลอยู่นอกแท่งเพื่อให้อ่านง่ายขึ้น
+        fig_trend.update_traces(textposition='outside')
+                st.plotly_chart(fig_trend, use_container_width=True)        
 
     elif selected_analysis == "Heatmap รายเดือน":
         st.markdown("<h4 style='color: #001f3f;'>Heatmap: จำนวนอุบัติการณ์รายเดือน</h4>", unsafe_allow_html=True)
