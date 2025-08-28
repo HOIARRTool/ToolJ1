@@ -42,51 +42,8 @@ ADMIN_PASSWORD = st.secrets.get("ADMIN_PASSWORD", "admin1234")
 
 LOGO_URL = "https://raw.githubusercontent.com/HOIARRTool/hoiarr/refs/heads/main/logo1.png"
 st.set_page_config(page_title="HOIA-RR", page_icon=LOGO_URL, layout="wide")
-st.markdown("""
-<style>
-/* CSS to style the text area inside the chat input */
-[data-testid="stChatInput"] textarea { min-height: 80px; height: 100px; resize: vertical; background-color: transparent; border: none; }
+https://www.facebook.com/share/p/1CEeF4Gkw5/
 
-/* ✅ --- START: CSS ใหม่สำหรับตารางในหน้าสรุป --- */
-.summary-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-.summary-table th, .summary-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-.summary-table th {
-    background-color: #f2f2f2;
-}
-/* -- ตาราง 4 คอลัมน์ (Sentinel) -- */
-.summary-table-4-col th:nth-child(1), .summary-table-4-col td:nth-child(1) { width: 20%; }
-.summary-table-4-col th:nth-child(2), .summary-table-4-col td:nth-child(2) { width: 20%; }
-.summary-table-4-col th:nth-child(3), .summary-table-4-col td:nth-child(3) { width: 10%; }
-.summary-table-4-col th:nth-child(4), .summary-table-4-col td:nth-child(4) { width: 50%; }
-
-/* -- ตาราง 5 คอลัมน์ (RCA ทั่วไป) -- */
-.summary-table-5-col th:nth-child(1), .summary-table-5-col td:nth-child(1) { width: 15%; }
-.summary-table-5-col th:nth-child(2), .summary-table-5-col td:nth-child(2) { width: 8%; }
-.summary-table-5-col th:nth-child(3), .summary-table-5-col td:nth-child(3) { width: 16%; }
-.summary-table-5-col th:nth-child(4), .summary-table-5-col td:nth-child(4) { width: 7%; }
-.summary-table-5-col th:nth-child(5), .summary-table-5-col td:nth-child(5) { width: 55%; }
-
-/* -- ตาราง 6 คอลัมน์ (RCA ของ PSG9) -- */
-.summary-table-6-col th:nth-child(1), .summary-table-6-col td:nth-child(1) { width: 12%; }
-.summary-table-6-col th:nth-child(2), .summary-table-6-col td:nth-child(2) { width: 8%; }
-.summary-table-6-col th:nth-child(3), .summary-table-6-col td:nth-child(3) { width: 16%; }
-.summary-table-6-col th:nth-child(4), .summary-table-6-col td:nth-child(4) { width: 14%; }
-.summary-table-6-col th:nth-child(5), .summary-table-6-col td:nth-child(5) { width: 6%; }
-.summary-table-6-col th:nth-child(6), .summary-table-6-col td:nth-child(6) { width: 44%; }
-/* ✅ --- END: สิ้นสุด CSS ใหม่ --- */
-
-</style>
-""", unsafe_allow_html=True)
 st.markdown("""
 <style>
 @media print {
@@ -1131,7 +1088,7 @@ def display_executive_dashboard():
 
     # --- 2. สร้าง Sidebar และเมนูกรองข้อมูล ---
     st.sidebar.markdown(
-        f"""<div style="display: flex; align-items: center; margin-bottom: 1rem;"><img src="{LOGO_URL}" style="height: 32px; margin-right: 10px;"><h2 style="margin: 0; font-size: 1.7rem; color: #001f3f; font-weight: bold;">HOIA-RR Menu</h2></div>""",
+        f"""<div style="display: flex; align-items: center; margin-bottom: 1rem;"><img src="{LOGO_URL}" style="height: 32px; margin-right: 10px;"><h2 style="margin: 0; font-size: 1.7rem;"><span class="gradient-text">HOIA-RR Menu</span></h2></div>""",
         unsafe_allow_html=True)
     st.sidebar.markdown("---")
     st.sidebar.header("Filter by Date")
