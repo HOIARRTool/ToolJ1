@@ -42,7 +42,66 @@ ADMIN_PASSWORD = st.secrets.get("ADMIN_PASSWORD", "admin1234")
 
 LOGO_URL = "https://raw.githubusercontent.com/HOIARRTool/hoiarr/refs/heads/main/logo1.png"
 st.set_page_config(page_title="HOIA-RR", page_icon=LOGO_URL, layout="wide")
-https://www.facebook.com/share/p/1CEeF4Gkw5/
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+    /* ✅ --- START: แก้ไขการกำหนดฟอนต์ --- */
+    /* กำหนดฟอนต์ 'Kanit' ให้กับส่วนหลักของแอป โดยไม่กระทบไอคอน */
+    html, body, [data-testid="stAppViewContainer"], [data-testid="stSidebar"] {
+        font-family: 'Kanit', sans-serif;
+    }
+    /* ✅ --- END: สิ้นสุดการแก้ไข --- */
+
+    /* --- Gradient Text for Sidebar Title --- */
+    .gradient-text {
+        background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888, #833ab4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    /* --- Original App Styles --- */
+    [data-testid="stChatInput"] textarea { min-height: 80px; height: 100px; resize: vertical; background-color: transparent; border: none; }
+
+    .metric-box {
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .metric-box .label { font-size: 0.9rem; color: #555; }
+    .metric-box .value { font-size: 1.8rem; font-weight: bold; color: #262730; }
+    .metric-box-1 { background-color: #e6fffa; border-color: #b2f5ea; }
+    .metric-box-2 { background-color: #fff3e0; border-color: #ffe0b2; }
+    .metric-box-3 { background-color: #fce4ec; border-color: #f8bbd0; }
+    .metric-box-4 { background-color: #e3f2fd; border-color: #bbdefb; }
+    .metric-box-5 { background-color: #f0f4c3; border-color: #e6ee9c; }
+    .metric-box-6 { background-color: #ffecb3; border-color: #ffd54f; }
+    .metric-box-7 { background-color: #ffcdd2; border-color: #ef9a9a; }
+    
+    .summary-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .summary-table th, .summary-table td { border: 1px solid #ddd; padding: 8px; text-align: left; word-wrap: break-word; overflow-wrap: break-word; }
+    .summary-table th { background-color: #f2f2f2; }
+    .summary-table-4-col th:nth-child(1), .summary-table-4-col td:nth-child(1) { width: 20%; }
+    .summary-table-4-col th:nth-child(2), .summary-table-4-col td:nth-child(2) { width: 20%; }
+    .summary-table-4-col th:nth-child(3), .summary-table-4-col td:nth-child(3) { width: 10%; }
+    .summary-table-4-col th:nth-child(4), .summary-table-4-col td:nth-child(4) { width: 50%; }
+    .summary-table-5-col th:nth-child(1), .summary-table-5-col td:nth-child(1) { width: 15%; }
+    .summary-table-5-col th:nth-child(2), .summary-table-5-col td:nth-child(2) { width: 15%; }
+    .summary-table-5-col th:nth-child(3), .summary-table-5-col td:nth-child(3) { width: 20%; }
+    .summary-table-5-col th:nth-child(4), .summary-table-5-col td:nth-child(4) { width: 10%; }
+    .summary-table-5-col th:nth-child(5), .summary-table-5-col td:nth-child(5) { width: 40%; }
+    .summary-table-6-col th:nth-child(1), .summary-table-6-col td:nth-child(1) { width: 12%; }
+    .summary-table-6-col th:nth-child(2), .summary-table-6-col td:nth-child(2) { width: 12%; }
+    .summary-table-6-col th:nth-child(3), .summary-table-6-col td:nth-child(3) { width: 20%; }
+    .summary-table-6-col th:nth-child(4), .summary-table-6-col td:nth-child(4) { width: 16%; }
+    .summary-table-6-col th:nth-child(5), .summary-table-6-col td:nth-child(5) { width: 8%; }
+    .summary-table-6-col th:nth-child(6), .summary-table-6-col td:nth-child(6) { width: 32%; }
+</style>
+""", unsafe_allow_html=True)
 
 st.markdown("""
 <style>
